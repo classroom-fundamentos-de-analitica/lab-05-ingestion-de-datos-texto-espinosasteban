@@ -28,7 +28,7 @@ def generar_dataframe(train_or_test: str):
 
 def guardar_dataframe(df: pd.DataFrame, nombre):
 
-    df.to_csv(nombre, sep = ",")
+    df.to_csv(nombre, sep = ",", index= False)
 
 if __name__ == "__main__":
     df_test, test = generar_dataframe("test")
@@ -36,6 +36,9 @@ if __name__ == "__main__":
 
     guardar_dataframe(df_test, f"{test}_dataset.csv")
     guardar_dataframe(df_train, f"{train}_dataset.csv")
+
+
+
 
 
 
